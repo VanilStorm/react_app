@@ -1,0 +1,24 @@
+.wrapper {
+    margin-top: 80px;
+    max-height: 650px;
+    overflow: scroll;
+}
+
+h1 {
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.emptyCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 25%;
+
+    font-size: 40px;
+    font-family: Raleway;
+    font-weight: 400;
+}
