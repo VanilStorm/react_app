@@ -1,0 +1,129 @@
+/*====PRODUCT=====*/
+
+
+.product {
+    display: flex;
+    margin: 60px 0;
+    font-family: Raleway;
+}
+.attributes button {
+    outline: none;
+    border: 1px solid black;
+    background-color: white;
+    margin-right:12px;
+    width: 60px;
+    height: 45px;
+    transition: .2s;
+
+}
+
+.attributes button:hover {
+    opacity: .5;
+}
+
+.attributes p {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Roboto Condensed";
+}
+
+.imgs {
+    display: flex;
+}
+
+.smallImg img{
+    width: 80px;
+    height: 85px;
+    display: block;
+    object-fit: contain;
+    margin: 0 40px 20px 0;
+    cursor: pointer;
+}
+
+.bigImg img {
+    width: 600px;
+    max-height: 500px;
+    display: block;
+    object-fit: contain;
+}
+
+
+
+/*====PRODUCT_DESCRIPTIONS=====*/
+
+
+.productDescriptions {
+    margin-left: 100px;
+}
+.brand {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.name {
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.attributes {
+    margin: 40px 0;
+}
+
+.description {
+    overflow: scroll;
+    scroll-behavior: smooth;
+    height: 250px;
+    width: 100%;
+}
+
+
+.price h2 {
+    font-weight: 700;
+}
+.description {
+    width: 100%;
+    height: 15vw;
+    margin-top: 30px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+}
+
+
+/*====DESCRIPTION_BTNS*/
+
+.active {
+    color: #5ECE7B;
+}
+
+.activeColor {
+    opacity: .5;
+}
+
+.btnsColors {
+    width: 100%;
+}
+
+.btnsCapacity button:active {
+    color: white;
+    background-color: black;
+}
+
+
+.addToCart button {
+    border: none;
+    width: 100%;
+    height: 50px;
+    background-color: #5ECE7B;
+    color: white;
+    text-transform: uppercase;
+    transition: .3s;
+    cursor: pointer;
+}
+.addToCard:active {
+    opacity: .6;
+}
+

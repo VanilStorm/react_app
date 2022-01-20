@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+.card {
+    position: relative;
+    width: 25vw;
+    height: 52vh;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.productImg {
+    width: 22vw;
+    height: 40vh;
+    display: block;
+    object-fit: contain;
+}
+
+.stock {
+    position: absolute;
+    top: 40%;
+    left: 23%;
+    font-family: Raleway;
+    font-size: 27px;
+    opacity: .3;
+}
+
+.card p {
+    font-size: 16px;
+    font-family: Raleway;
+    font-weight: lighter;
+}
+
+.card:hover {
+    box-shadow: 0 4px 35px rgba(168, 172, 176, 0.19);
+}
+
+.addToBasket {
+    position: absolute;
+    bottom: 35px;
+    left: 72%;
+    cursor: pointer;
+}
