@@ -1,8 +1,8 @@
-import React, {Component, memo} from 'react';
+import React, {memo} from 'react';
 import styles from "./LayoutCard.module.css"
 import CircleIcon from "../CircleIcon/CircleIcon";
 
-class LayoutCard extends Component {
+class LayoutCard extends React.PureComponent {
     render() {
         return (
             <>

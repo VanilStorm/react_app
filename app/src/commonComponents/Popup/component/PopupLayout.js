@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styles from './PopupLayout.module.css'
-import PopupCard from "../PopupCard/PopupCard";
+import PopupCart from "../PopupCart/PopupCart";
 import {NavLink} from "react-router-dom";
 
-class PopupLayout extends Component {
+class PopupLayout extends React.PureComponent {
     render() {
         {this.props.isToggle && window.addEventListener('scroll', () => this.props.handleChangeToggle())}
         return (
@@ -20,8 +20,8 @@ class PopupLayout extends Component {
                             overflow: "scroll"
                         }}>
                             {this.props.selectedProducts.map((product, index) => {
-                                return <PopupCard handleIncrement={() => this.props.handleIncrement(product.id)}
-                                                  handleDecrement={()=> this.props.handleDecrement(product.id)}
+                                return <PopupCart handleIncrement={() => this.props.handleIncrement(product)}
+                                                  handleDecrement={()=> this.props.handleDecrement(product)}
                                                   handleRemove={() => this.props.handleRemove(index, product.id)}
                                                   selectedProducts={product}
                                                   currentId={this.props.currentId}

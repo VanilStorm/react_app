@@ -1,8 +1,8 @@
-import React, {Component, memo} from 'react';
-
+import React, {memo} from 'react';
+import Parser from 'html-react-parser'
 import styles from "./DescriptionLayout.module.css"
 
-class DescriptionLayout extends Component {
+class DescriptionLayout extends React.PureComponent {
     render() {
         return (
             <div className={styles.product}>
@@ -80,17 +80,24 @@ class DescriptionLayout extends Component {
                             style={{opacity: this.props.currentProduct && !this.props.currentProduct.inStock ? '.6' : '1'}}
                             onClick={() => {
                                 this.props.currentProduct.inStock &&
-                                this.props.incrementQuantity(this.props.currentProduct.id) &&
+                                this.props.incrementQuantity(this.props.productAttributes)&&
                                 this.props.addSelectedProduct(this.props.productAttributes)
+                                if(this.props.selectedProducts.length>0) {
+                                    this.props.productFilter(this.props.productAttributes)
+                                }
                                 this.props.handleToggle(false)
                             }}>{this.props.currentProduct && this.props.currentProduct.inStock ? "Add to cart" : "Out of stock"}</button>
                     </div>
 
                     <div className={styles.description}>
-                        {this.props.currentProduct &&
-                        <div dangerouslySetInnerHTML={{__html: this.props.currentProduct.description}}>{}</div>}
+                        {
+                            this.props.currentProduct &&
+                            <div>{Parser(this.props.currentProduct.description)}</div>
+                        }
                     </div>
                 </div>
+
+                <div className={styles.closeArea} onClick={()=>this.props.handleToggle(false)}>{}</div>
             </div>
         );
     }

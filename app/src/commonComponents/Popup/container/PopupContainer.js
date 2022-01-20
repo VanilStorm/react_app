@@ -9,8 +9,8 @@ import {
 
 class PopupContainer extends Component {
 
-    handleIncrement = (id) => this.props.incrementQuantity(id)
-    handleDecrement = (id) => this.props.decrementQuantity(id)
+    handleIncrement = (product) => this.props.incrementQuantity(product)
+    handleDecrement = (product) => this.props.decrementQuantity(product)
     handleRemove = (index, id) => this.props.removeProduct(index, id)
 
     render() {
@@ -31,7 +31,7 @@ class PopupContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-    selectedProducts: state.popup.selectedProducts,
+    selectedProducts: state.cartPopup.selectedProducts,
     currentId: state.currency.currentId,
     currentSymbol: state.currency.currentSymbol,
 

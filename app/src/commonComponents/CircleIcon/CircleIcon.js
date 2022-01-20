@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import circleIcon from "../../Icons/Circle_Icon.svg"
 
-class CircleIcon extends Component {
+class CircleIcon extends React.PureComponent {
     render() {
         return (
             <div>

@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styles from "../../Header/component/HeaderLayout.module.css";
 
-class CurrencyLayout extends Component {
+class CurrencyLayout extends React.PureComponent {
     render() {
         return (
             <select style={{cursor: 'pointer'}} value={this.props.currentSymbol} onChange={this.props.handleChangeCurrency} className={styles.dropDown}>

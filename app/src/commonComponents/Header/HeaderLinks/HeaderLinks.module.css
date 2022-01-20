@@ -1,17 +1,21 @@
 .navLink {
-    outline: none;
+    background-color: white;
+    border: none;
+    text-transform: uppercase;
     text-decoration: none;
     color: black;
     font-family: "Raleway";
-    margin-right: 30px;
+    font-weight: 400;
+    font-size: 16px;
+
 }
 
 .active {
     outline: none;
     text-decoration: none;
+    text-transform: uppercase;
     color: #5ECE7B;
     font-family: "Raleway";
     padding-bottom: 15px;
     border-bottom: 1px solid #5ECE7B;
-    margin-right: 30px;
 }

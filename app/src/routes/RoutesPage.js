@@ -1,19 +1,17 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Route, Routes} from "react-router-dom";
 
-import HEADER_ROUTES from "./RouteNames";
-import WomenPageContainer from "../pages/WomenPage/container/WomenPageContainer";
-import PageNotFound from "../commonComponents/PageNotFound/PageNotFound";
+import WomenPageContainer from "../pages/MainPage/container/MainPageContainer";
 import CartContainer from "../pages/CartPage/container/CartContainer";
+import HEADER_ROUTES from "./RouteNames";
 
-class RoutesPage extends Component {
+class RoutesPage extends React.PureComponent {
     render() {
         return (
             <div>
                 <Routes>
-                    <Route path="*" element={<PageNotFound/>}/>
-                    <Route path={HEADER_ROUTES.WOMEN} element={<WomenPageContainer/>}/>
-                    <Route path={'/cart'} element={<CartContainer/>}/>
+                    <Route path="*" element={<WomenPageContainer/>}/>
+                    <Route path={HEADER_ROUTES.CART} element={<CartContainer/>}/>
                 </Routes>
             </div>
         );

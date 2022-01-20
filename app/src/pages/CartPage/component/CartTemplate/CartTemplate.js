@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import styles from './CartTemplate.module.css'
 
-class CartTemplate extends Component {
+class CartTemplate extends React.PureComponent {
     render() {
         return (
             <div className={styles.wrapper}>

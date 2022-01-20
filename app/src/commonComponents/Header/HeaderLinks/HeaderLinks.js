@@ -1,16 +1,17 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-import HEADER_ROUTES from "../../../routes/RouteNames";
 import styles from "./HeaderLinks.module.css"
 import {NavLink} from "react-router-dom";
 
-class HeaderLinks extends Component {
+class HeaderLinks extends React.PureComponent {
     render() {
         return <div>
-            {Object.entries(HEADER_ROUTES).map(([routeName, path]) => (
-                <NavLink className={({isActive}) => isActive ? styles.active : styles.navLink} to={path}
-                         key={routeName}>{routeName}</NavLink>
-            ))}
+            {this.props.categories.map((category, id) => {
+                return <NavLink key={id} to={category.name} className={({isActive}) => isActive ? styles.active : ''}>
+                    <button key={id} className={styles.navLink}
+                            onClick={this.props.handleChangeCategory} value={category.name}>{category.name}</button>
+                </NavLink>
+            })}
         </div>
     }
 }

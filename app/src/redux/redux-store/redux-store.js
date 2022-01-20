@@ -1,12 +1,12 @@
 import {createStore, combineReducers} from "redux";
-import {womenPageReducer} from "../reducers/womenPage/womenPageReducer";
+import {mainPageReducer} from "../reducers/mainPage/mainPageReducer";
 import {currenciesReducer} from "../reducers/currencies/currenciesReducer";
 import {cartPopupReducer} from "../reducers/cartPopup/cartPopupReducer";
 
 const reducers = combineReducers({
-    womenPage: womenPageReducer,
+    mainPage: mainPageReducer,
     currency: currenciesReducer,
-    popup: cartPopupReducer
+    cartPopup: cartPopupReducer
 })
 
 const store = createStore(reducers)

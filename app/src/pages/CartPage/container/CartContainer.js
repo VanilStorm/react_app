@@ -10,8 +10,8 @@ import styles from "../component/CartLayout/CartLayout.module.css";
 
 class CartContainer extends Component {
 
-    handleIncrement = (id) => this.props.incrementQuantity(id)
-    handleDecrement = (id) => this.props.decrementQuantity(id)
+    handleIncrement = (product) => this.props.incrementQuantity(product)
+    handleDecrement = (product) => this.props.decrementQuantity(product)
     handleRemove = (index, id) => this.props.removeProduct(index, id)
 
     render() {
@@ -33,7 +33,7 @@ class CartContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-    selectedProducts: state.popup.selectedProducts,
+    selectedProducts: state.cartPopup.selectedProducts,
     currentId: state.currency.currentId,
 })
 

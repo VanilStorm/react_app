@@ -2,6 +2,7 @@ import React, {Component, memo} from 'react';
 
 import DescriptionLayout from "../component/DescriptionLayout";
 import {queries} from "../../../server/queries";
+import {filter, productFilter, updateProducts} from "../../../redux/reducers/cartPopup/cartPopupReducer";
 
 class DescriptionContainer extends Component {
     state = {
@@ -31,7 +32,6 @@ class DescriptionContainer extends Component {
             }))
     }
 
-
     handleTab = (index) => this.setState({photoIndex: index})
 
     handleChangeProductColor = (color) => this.setState({
@@ -57,14 +57,10 @@ class DescriptionContainer extends Component {
     render() {
         return (
             <div>
-                <DescriptionLayout currentProduct={this.state.currentProduct}
+                <DescriptionLayout {...this.props}
+                                   currentProduct={this.state.currentProduct}
                                    photoIndex={this.state.photoIndex}
                                    productAttributes={this.state.productAttributes}
-                                   handleToggle={this.props.handleToggle}
-                                   toggle={this.props.toggle}
-                                   currentId={this.props.currentId}
-                                   addSelectedProduct={this.props.addSelectedProduct}
-                                   incrementQuantity={this.props.incrementQuantity}
                                    handleTab={this.handleTab}
                                    handleChangeProductColor={this.handleChangeProductColor}
                                    handleChangeProductCapacity={this.handleChangeProductCapacity}

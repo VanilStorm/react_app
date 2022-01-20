@@ -2,6 +2,7 @@
 
 
 .product {
+    position: relative;
     display: flex;
     margin: 60px 0;
     font-family: Raleway;
@@ -127,3 +128,12 @@
     opacity: .6;
 }
 
+
+.closeArea {
+    position: absolute;
+    top: -29%;
+    left: 51%;
+    width: 5%;
+    height: 10%;
+    cursor: pointer;
+}

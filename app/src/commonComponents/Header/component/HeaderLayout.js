@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import styles from "./HeaderLayout.module.css"
 import basket from "../../../Icons/Basket.svg"
@@ -7,12 +7,12 @@ import Logo from "../../Logo/Logo";
 import CurrencyContainer from "../../Currency/container/CurrencyContainer";
 import PopupContainer from "../../Popup/container/PopupContainer";
 
-class HeaderLayout extends Component {
+class HeaderLayout extends React.PureComponent {
     render() {
         return (
             <div style={{position: 'relative'}}>
                 <div className={styles.wrapper}>
-                    <HeaderLinks/>
+                    <HeaderLinks categories={this.props.categories} handleChangeCategory={this.props.handleChangeCategory}/>
                     <Logo/>
                     <div style={{display: "flex"}}>
                         <CurrencyContainer/>

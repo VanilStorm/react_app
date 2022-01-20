@@ -1,7 +1,5 @@
 const HEADER_ROUTES = {
-    WOMEN: "/women-page",
-    MEN: "/men-page",
-    KIDS: "/kids-page",
+    CART: '/cart'
 }
 
 export default HEADER_ROUTES;
